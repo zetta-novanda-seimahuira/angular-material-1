@@ -1,0 +1,52 @@
+<div class="container-detail">
+    <mat-tab-group>
+        <mat-tab label="Movie">
+            <div class="container-detail">
+                <h1>{{detailMovie.title}}</h1>
+                <mat-grid-list cols="2" rowHeight="2:1">
+                    <mat-grid-tile>
+                        <img src={{detailMovie.poster}} alt={{detailMovie.title}} height="300px">
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div>
+                            <tr>
+                                <td>Title</td>
+                                <td>: {{detailMovie.title}}</td>
+                            </tr>
+                            <tr>
+                                <td>Year</td>
+                                <td>: {{detailMovie.year}}</td>
+                            </tr>
+                            <tr>
+                                <td>Laguage </td>
+                                <td>: {{detailMovie.Language}}</td>
+                            </tr>
+                            <tr>
+                                <td>Country </td>
+                                <td>: {{detailMovie.Country}}</td>
+                            </tr>
+                            <tr>
+                                <td>Rating </td>
+                                <td>: {{detailMovie.imdbRating}}</td>
+                            </tr>
+                            <tr>
+                                <td>Actors </td>
+                                <td>: {{detailMovie.actors}}</td>
+                            </tr>
+                            <tr>
+                                <td>Plot </td>
+                                <td>: {{detailMovie.plot}}</td>
+                            </tr>
+                            
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div> 
+        </mat-tab>
+        <mat-tab label="List of Actors">
+            <div class="container-detail" *ngFor="let ac of dataActors; let i = index" >
+                <mat-card>{{dataActors[i]}}</mat-card>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div> 

@@ -1,0 +1,18 @@
+<div class="content">
+    <mat-card class="movie-card" [class.mat-elevation-z2]="!isActive"
+    [class.mat-elevation-z8]="isActive"
+    (click) = "isActive = !isActive">
+        <mat-card-header>
+          <mat-card-title>{{movie.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{movie.poster}} alt="'Photo of '{{movie.title}}">
+        <mat-card-content>
+          <p>
+            Actors : {{movie.actors}}
+          </p>
+        </mat-card-content>
+    </mat-card>
+
+</div>
+    
+   

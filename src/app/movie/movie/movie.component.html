@@ -1,0 +1,15 @@
+<h1>List Movie</h1>
+<hr>
+
+<mat-grid-list cols="3" rowHeight="1:1.5">
+    <mat-grid-tile  *ngFor="let mv of movies; let i = index">
+        <app-detail-movie
+        [movie]="mv"
+        routerLink="detail/{{mv.id}}">
+        </app-detail-movie> 
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+
+
